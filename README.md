@@ -2,6 +2,11 @@
 
 This project aims to speed up the time to understand & implement multiple OAuth redirects using Slack's Bolt framework. 
 
+<p align="center">
+
+[![Slash Command Demo](https://user-images.githubusercontent.com/10428517/159196639-e5994923-2fcf-4493-a405-70b6a026bb3e.mp4)](https://user-images.githubusercontent.com/10428517/159196639-e5994923-2fcf-4493-a405-70b6a026bb3e.mp4)
+</p>
+
 # Steps 
 1. [App Configuration](#step-1-app-configuration)
 2. [Install the App](#step-2-install-the-app)
