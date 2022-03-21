@@ -5,18 +5,13 @@ This project aims to speed up the time to understand & implement multiple OAuth 
 # Steps 
 1. [App Configuration](#step-1-app-configuration)
 2. [Install the App](#step-2-install-the-app)
-3. [Add the App to a Channel](#step-3-add-the-app-to-a-channel)
-4. [Send a Slack Connect Invite](#step-4-send-a-slack-connect-invite)
-5. [Accept the Slack Connect Invite](#step-5-accept-the-slack-connect-invite)
-6. [Approve the Slack Connect Invite](#step-6-approve-the-slack-connect-invite)
-7. [Disconnect the Channel](#step-7-disconnect-the-channel) 
 8. [Conclusion](#conclusion) 
 
 ## Step 1. App Configuration
 
 #### Create a Slack App
 
-**Note: this demo assumes you will be able to host your app either via Ngrok[https://ngrok.com/] (recommended), (Glitch)[https://glitch.com/], or another service.** You will need to do this set your OAuth redirect URLs as shown in the screenshot below.
+> **This demo assumes you will be able to host your app either via [Ngrok](https://ngrok.com/) (recommended), [Glitch](https://glitch.com/), or another service.** You will need to do this set your OAuth redirect URLs as shown in the screenshot below.
 
 With Ngrok, to start your app, first use the `ngrok http 3000` command to start ngrok. From there, copy and paste your 
 forwarding address into your manifest file as shown in the screenshots below. Make sure to start the node app with `Node app.js` as well, so that all requests can be fowarded to Ngrok from your app.
