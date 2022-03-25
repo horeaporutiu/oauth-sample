@@ -1,16 +1,16 @@
 {
     "display_information": {
-        "name": "OAuth Sample"
+        "name": "Admin Scopes Demo"
     },
     "features": {
         "bot_user": {
-            "display_name": "OAuth Sample",
+            "display_name": "Admin Scopes Demo",
             "always_online": false
         },
         "slash_commands": [
             {
-                "command": "/horea",
-                "url": "https://8e7e-2601-646-4380-66e0-547f-16a9-210f-fe4e.ngrok.io/slack/events",
+                "command": "/horea4",
+                "url": "https://e46d-2601-646-4380-66e0-f539-ea71-2293-a892.ngrok.io/slack/events",
                 "description": "test",
                 "should_escape": false
             }
@@ -18,9 +18,12 @@
     },
     "oauth_config": {
         "redirect_urls": [
-            "https://8e7e-2601-646-4380-66e0-547f-16a9-210f-fe4e.ngrok.io/slack/oauth_redirect"
+            "https://e46d-2601-646-4380-66e0-f539-ea71-2293-a892.ngrok.io/slack/oauth_redirect"
         ],
         "scopes": {
+            "user": [
+                "admin.conversations:write"
+            ],
             "bot": [
                 "commands"
             ]
