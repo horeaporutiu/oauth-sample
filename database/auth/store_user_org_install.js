@@ -1,8 +1,9 @@
+const model = require('../db_model');
 
-const model = require('../db');
-const saveUserOrgInstall = async function(installation) {
-  const resp = await model.User.updateOne(
-      {_id: installation.enterprise.id},
+const saveUserOrgInstall = async (installation) => {
+  try {
+    const resp = await model.User.updateOne(
+      { _id: installation.enterprise.id },
       {
         team: 'null',
         enterprise: {
@@ -20,9 +21,13 @@ const saveUserOrgInstall = async function(installation) {
         authVersion: installation.authVersion,
         bot: 'null',
       },
-      {upsert: true},
-  );
-  return resp;
+      { upsert: true },
+    );
+    return resp;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
 };
 
-module.exports = {saveUserOrgInstall};
+module.exports = { saveUserOrgInstall };

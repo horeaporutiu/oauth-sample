@@ -1,13 +1,15 @@
-const model = require('../db');
-const saveUserWorkspaceInstall = async function(installation) {
-  const resp = await model.User.updateOne(
-      {_id: installation.team.id},
+const model = require('../db_model');
+
+const saveUserWorkspaceInstall = async (installation) => {
+  try {
+    const resp = await model.User.updateOne(
+      { _id: installation.team.id },
       {
-        team: {id: installation.team.id, name: installation.team.name},
+        team: { id: installation.team.id, name: installation.team.name },
         // entperise id is null on workspace install
-        enterprise: {id: 'null', name: 'null'},
+        enterprise: { id: 'null', name: 'null' },
         // user scopes + token is null on workspace install
-        user: {token: 'null', scopes: 'null', id: installation.user.id},
+        user: { token: 'null', scopes: 'null', id: installation.user.id },
         tokenType: installation.tokenType,
         isEnterpriseInstall: installation.isEnterpriseInstall,
         appId: installation.appId,
@@ -19,8 +21,12 @@ const saveUserWorkspaceInstall = async function(installation) {
           id: installation.bot.id,
         },
       },
-      {upsert: true},
-  );
-  return resp;
+      { upsert: true },
+    );
+    return resp;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
 };
-module.exports = {saveUserWorkspaceInstall};
+module.exports = { saveUserWorkspaceInstall };

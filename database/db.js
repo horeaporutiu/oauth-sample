@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-console.log(process.env.DB_PASSWORD)
-
 const uri = 'mongodb+srv://' + process.env.DB_USERNAME + ':' +
     process.env.DB_PASSWORD +
     '@cluster0.yvswg.mongodb.net/' + process.env.DB_NAME +
@@ -40,20 +38,7 @@ const usersSchema = mongoose.Schema(
 
 const User = mongoose.model('User', usersSchema);
 
-const findUser = async function (id) {
-    try {
-        const user = await User.find({ _id: id });
-        // return first user we find
-        if (user[0] != undefined) {
-            return user[0];
-        }
-    } catch (error) {
-        console.error(error);
-    }
-};
-
 module.exports = {
     User,
-    connect,
-    findUser,
+    connect
 };
