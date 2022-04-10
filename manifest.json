@@ -10,7 +10,7 @@
         "slash_commands": [
             {
                 "command": "/horea",
-                "url": "https://6cd3-2601-646-4380-66e0-40b1-603d-3bd8-606e.ngrok.io/slack/events",
+                "url": "https://7807-2601-646-4380-66e0-f0e3-b5f0-8d10-3fc6.ngrok.io/slack/events",
                 "description": "test",
                 "should_escape": false
             }
@@ -18,9 +18,12 @@
     },
     "oauth_config": {
         "redirect_urls": [
-            "https://6cd3-2601-646-4380-66e0-40b1-603d-3bd8-606e.ngrok.io/slack/oauth_redirect"
+            "https://7807-2601-646-4380-66e0-f0e3-b5f0-8d10-3fc6.ngrok.io/slack/oauth_redirect"
         ],
         "scopes": {
+            "user": [
+                "admin.conversations:write"
+            ],
             "bot": [
                 "commands"
             ]

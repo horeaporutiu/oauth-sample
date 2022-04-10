@@ -1,4 +1,4 @@
-const model = require('../db_model');
+const model = require('../db');
 
 const saveUserOrgInstall = async (installation) => {
   try {
