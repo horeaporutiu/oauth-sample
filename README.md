@@ -1,6 +1,6 @@
 # 🤖 Slack OAuth Demo 🤖
 
-This project aims to speed up the time to understand & implement multiple OAuth redirects using Slack's Bolt framework.
+This project aims to speed up the time to understand & implement multiple OAuth redirects using Slack's Bolt framework. 
 
 <p align="center">
 
