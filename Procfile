@@ -1,1 +1,1 @@
-web: node app.js
+web: source .env node app.js
