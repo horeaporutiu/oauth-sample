@@ -54,11 +54,7 @@ registerListeners(app);
 /** Start Bolt App */
 (async () => {
   try {
-    let port = process.env.PORT;
-    if (port == null || port == "") {
-      port = 3000;
-    }
-    await app.start(port);
+    await app.start(process.env.PORT || 3000);
     console.log('⚡️ Bolt app is running! ⚡️');
     db.connect();
     console.log('DB is connected.');
